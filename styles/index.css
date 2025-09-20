@@ -1,0 +1,286 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Navbar Styles */
+nav{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 4px 4px 10px gray;
+}
+
+.nav-links {
+    display: flex;
+    font-size: 30px;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links > li > a {
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links > li > a:hover {
+    background-color: lightgray;
+    border-radius: 8px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: blue;
+  cursor: pointer;
+}
+
+/* Hero Section Styles */
+
+section.hero { 
+  margin: 30px 1.5em;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero-info{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-info > h1 {
+  font-size: 60px;
+}
+
+.hero-info > p {
+  font-size: large;
+  line-height: 2em;
+}
+
+.hero-info > a {
+  background-color: blue;
+  text-decoration: none;
+  border: 2px solid gainsboro;
+  border-radius: 45px;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.hero-img > img {
+  width: 500px;
+}
+
+
+/* Skills Section Styles */
+
+.skills > h1 {
+  padding: 1.5em;
+  text-align: center;
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+.skills-holder {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 2em;
+  box-shadow: 2px 2px 30px gray;
+
+}
+
+.skill-card-items {
+  display: flex;
+  gap: 10px;
+}
+
+.skill-card-items > p {
+  background-color: rgb(146, 127, 255);
+  padding: 6px;
+  border-radius: 45px;
+}
+
+/* Hobbies Section Styles */
+
+section.hobbies {
+  margin: 30px 1.5em;
+}
+
+.hobbies > h1 {
+  text-align: center;
+  font-size: 50px;
+  text-decoration: underline;
+  padding: 1.5em;
+}
+
+.hobbies-holder {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2em;
+  justify-content: center;
+}
+
+.hobby-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 2em;
+  box-shadow: 2px 2px 30px gray;
+  width: 300px;
+  text-align: center;
+}
+
+.hobby-card > img {
+  width: 100px;
+  align-self: center;
+}
+
+.hobby-card > p {
+  font-size: large;
+  line-height: 2em;
+}
+
+/* Contact Section Styles */
+
+section.contacts {
+  margin: 2em 1.5em;
+  text-align: center;
+}
+
+.contacts > h1 {
+  font-size: 50px;
+  text-decoration: underline;
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.contacts > p {
+  font-size: large;
+  line-height: 2em;
+  margin-bottom: 20px;
+  white-space:pre-line;
+}
+
+.contact-buttons {
+  margin-top: 2em;
+  margin-bottom: 4em;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.contact-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-btn:hover {
+  background: #808080;
+}
+
+/* Footer Styles */
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: rgb(146, 127, 255);
+  color: white;
+  margin-top: 30px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 900px) {
+  .hero-img{
+    display: none;
+  }
+
+  .hero-info { 
+    width: 100%;
+    gap: 50px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right:20px;
+    top: 35px;
+  }
+
+  nav {
+    flex-direction: column; /* Stack logo and links */
+    padding: 15px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links > li > a {
+    font-size: 20px; /* Slightly smaller text */
+    padding: 10px; /* Reduced padding */
+    display: block; /* Make links block-level for full-width click */
+    text-align: center; /* Center text */
+    border-bottom: 1px solid lightgray; /* Add a separator */
+    margin: 0 10px; /* Add some horizontal margin */
+  }
+
+  .nav-links.active{
+    display: block;
+    padding: 30px 10px;
+    font-size: 24px; /* Slightly smaller text */
+  }
+
+  .nav-links.active > li{
+    padding-top:30px;
+  }
+
+  .contacts>p{
+    white-space: normal;
+  }
+
+  .contact-buttons{
+    flex-direction: column;
+    width: 50%;
+  }
+}
