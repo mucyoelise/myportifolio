@@ -225,6 +225,31 @@ footer {
   margin-top: 30px;
 }
 
+/* Scroll to Top Button */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF; /* Button background */
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: none; /* Hidden by default */
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+
 /* Responsive Styles */
 
 @media (max-width: 900px) {
